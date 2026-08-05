@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sentinelfim"
+version = "1.0.0"
+description = "A defensive file-integrity monitor with signed SHA-256 baselines."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Khaya Guzu"}]
+
+[project.scripts]
+sentinelfim = "sentinelfim.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
